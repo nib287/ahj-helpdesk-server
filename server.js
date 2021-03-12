@@ -14,6 +14,7 @@ app.use(koaBody({
 
 app.use(async(ctx, next) => {
     ctx.response.set({'Access-Control-Allow-Origin':'*'});
+    ctx.response.set({'Access-Control-Allow-Methods': '*'});
     return await next();
 });
 
